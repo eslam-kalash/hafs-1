@@ -9,7 +9,7 @@ import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 
 // internal imports
-import Landing from './Landing';
+import Home from './Home';
 import history from './history';
 
 // Create a Router context and <Switch> component to render first matched <Route>
@@ -17,7 +17,7 @@ export default () => {
     return (
         <Router history={history}>
             <Switch>
-                <Route path="/" exact component={Landing} />
+                <Route path="/" exact component={Home} />
             </Switch>
         </Router>
     );

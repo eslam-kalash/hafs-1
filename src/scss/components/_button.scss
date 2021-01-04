@@ -1,0 +1,38 @@
+.btn {
+    border-radius: 4px;
+    opacity: 1;
+    text-align: left;
+    font: normal normal normal 13px/24px Poppins;
+    letter-spacing: 0px;
+    &--primary {
+        background: #004E6E 0% 0% no-repeat padding-box;
+        border-color: #004E6E;
+        color: #FFF;
+        &:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+            background-color: #004E6E;
+            border-color: #004E6E;
+        }
+        &:not(:disabled):not(.disabled) {
+            cursor: pointer;
+        }
+        &:hover {
+            background-color: #0069d9;
+            border-color: #004E6E;
+        }
+    }
+    &--light {
+        background: #FFF 0% 0% no-repeat padding-box;
+        border-color: #FFF;
+        box-shadow: 0px 20px 40px #4385A74D;
+        text-align: left;
+        color: #004E6E;
+    }
+    &--view {
+        text-align: left;
+        text-decoration: underline;
+        font: normal normal 600 15px/32px Poppins;
+        letter-spacing: 0px;
+        color: #004E6E;
+        text-transform: uppercase;
+    }
+}

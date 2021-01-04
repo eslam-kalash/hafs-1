@@ -1,0 +1,275 @@
+.header {
+    background: transparent url('/img/bk.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    background-size: cover;
+    height: 95vh;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        width: 40%;
+        &--title {
+            text-align: left;
+            font: normal normal bold 35px/56px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+        }
+        &--think {
+            text-align: left;
+            font: normal normal 500 20px/32px Poppins;
+            letter-spacing: 0px;
+            color: #004E6E;
+            opacity: 1;
+        }
+        &--paragraph {
+            text-align: left;
+            font: normal normal 500 15px/24px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+            opacity: 1;
+        }
+    }
+}
+
+.board {
+    background: #4385A7 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 300px;
+    text-align: center;
+
+    &__content {
+        background: transparent url('/img/Group 392.png') 0% 0% no-repeat padding-box;
+        height: 100%;
+        padding: 1.5rem;
+    }
+    &__title {
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    &__card {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 40px 80px #0000001A;
+        border-radius: 13px;
+        opacity: 1;
+        padding: 2rem 4rem;
+        max-width: 700px;
+        height: 200px;
+        transform: translateY(80px);
+        margin: auto;
+    }
+}
+
+.services {
+    padding-top: 130px;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+
+    &__cardContainer {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    &__card {
+        margin: auto;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 1px 6px #0000001A;
+        border-radius: 4px;
+        opacity: 1;
+        padding: 2rem;
+        height: 90%;
+        margin-bottom: 20px;
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        &--title {
+            font: normal normal 600 15px/24px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+            text-transform: uppercase;
+            opacity: 1;
+        }
+        &--paragraph {
+            text-align: center;
+            font: normal normal 600 11px/21px Poppins;
+            letter-spacing: 0px;
+            color: #004E6E;
+            opacity: 1;
+        }
+    }
+}
+
+.statistics {
+    background: #FCFCFC 0% 0% no-repeat padding-box;
+    padding: 2rem;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+    &__container {
+        max-width: 700px;
+        margin: auto;
+        text-align: center;
+
+        img {
+            width: 100%;
+            height: 60px;
+            margin: auto;
+            margin-bottom: 35px;
+        }
+        span {
+            text-align: center;
+            font: normal normal 600 25px/32px Poppins;
+            letter-spacing: 0px;
+            color: #004E6E;
+            text-transform: uppercase;
+        }
+        p{
+            text-align: center;
+            font: normal normal normal 15px/32px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+    }
+}
+
+.articles {
+    padding: 2rem;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+    }
+}
+
+.games {
+    padding: 2rem;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    &__container {
+        max-width: 700px;
+        text-align: center;
+        margin: auto;
+
+        img {
+            margin-bottom: 30px;
+        }
+        p {
+            text-align: center;
+            font: normal normal normal 15px/27px Poppins;
+            letter-spacing: 0px;
+            color: #A8A8A8;
+        }
+    }
+}
+
+.team {
+    padding: 2rem;
+    text-align: center;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    &__container {
+        max-width: 1100px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    &__card {
+        border: 1px solid #BFE9FF;
+        border-radius: 5px;
+        text-align: center;
+        padding: 1.5rem;
+
+        img {
+            border-radius: 74px;
+            width: 90px;
+            height: 90px;
+            margin: auto;
+            margin-bottom: 15px;
+        }
+        &--name {
+            font: normal normal 600 15px/27px Poppins;
+            letter-spacing: 0px;
+            color: #004E6E;
+        }
+        &--gender {
+            text-align: left;
+            font: italic normal normal 15px/27px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+        &--description {
+            font: normal normal normal 12px/19px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+        &--group {
+            display: inline-block;
+            margin-right: 10px;
+            text-align: left;
+        }
+        &--title {
+            font: normal normal 500 12px/27px Poppins;
+            letter-spacing: 0px;
+            color: #4385A7;
+        }
+        &--detail {
+            font: normal normal normal 12px/19px Poppins;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+        &--list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                border: 1px solid #0FCCC0;
+                border-radius: 14px;
+                text-align: left;
+                font: normal normal normal 12px/32px Poppins;
+                letter-spacing: 0px;
+                color: #6FCBC6;
+                display: inline-block;
+                padding: 0 0.5rem;
+                margin: 5px;
+            }
+        }
+    }
+}
