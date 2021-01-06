@@ -10,6 +10,8 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 // internal imports
 import Home from './Home';
+import Articles from './Articles';
+import Pricing from './Pricing';
 import history from './history';
 
 // Create a Router context and <Switch> component to render first matched <Route>
@@ -18,6 +20,8 @@ export default () => {
         <Router history={history}>
             <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/articles" component={Articles} />
+                <Route path="/pricing" component={Pricing} />
             </Switch>
         </Router>
     );

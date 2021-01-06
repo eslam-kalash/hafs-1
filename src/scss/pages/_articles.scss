@@ -1,0 +1,36 @@
+.articles__container {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    .nav {
+        display: block;
+        border-bottom: none;
+        margin-bottom: 1.5rem;
+
+        .nav-item {
+            display: inline-block;
+        }
+        .nav-link {
+            transition: all 0.3s;
+            font: normal normal 600 13px/32px Poppins;
+            color: #000000;
+            border: none;
+
+            &.active {
+                font: normal normal 600 15px/32px Poppins;
+                color: #004E6E;
+                text-transform: uppercase;
+                border-bottom: 4px solid #004E6E;
+            }
+        }
+    }
+}
+
+.articles__wrapper {
+    text-align: center;
+
+    img {
+        width: 100%;
+    }
+}

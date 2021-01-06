@@ -3,15 +3,15 @@ import React from 'react';
 
 // import Header from './../../components/Header';
 import Navigation from './../../components/Navigation';
-import HomeContent from './../../components/HomeContent';
+import ArticlesPage from '../../components/ArticlesPage';
 import Footer from './../../components/Footer';
 
-const Home = () => (
+const Articles = () => (
         <div className="page-container">
-            <Navigation page={'home'} />
-            <HomeContent />
+            <Navigation page={'articles'} />
+            <ArticlesPage />
             <Footer />
         </div>
 );
 
-export default Home;
+export default Articles;

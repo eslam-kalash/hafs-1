@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TeamCard from './TeamCard';
+import ArticlesContainer from '../ArticlesPage/ArticlesContainer';
+import ContactUs from './ContactUs';
 import { Button } from 'react-bootstrap';
+import CountUp from 'react-countup';
 
-const HomeContent = () => (
+const HomeContent = () => {
+
+    return (
     <div>
         <section className="header">
             <div className="container header__content">
@@ -94,17 +99,17 @@ const HomeContent = () => (
                 <div className="row">
                     <div className="col-lg-4">
                         <img src="img/teacher.svg" alt="teacher"/>
-                        <span>27502</span>
+                        <span><CountUp end={27502} /></span>
                         <p>Teacher</p>
                     </div>
                     <div className="col-lg-4">
                         <img src="img/muslim.svg" alt="muslim"/>
-                        <span>15230</span>
+                        <span><CountUp end={15230} /></span>
                         <p>Student</p>
                     </div>
                     <div className="col-lg-4">
                         <img src="img/teaching.svg" alt="teaching"/>
-                        <span>6532</span>
+                        <span><CountUp end={6532} /></span>
                         <p>Classroom</p>
                     </div>
                 </div>
@@ -114,6 +119,8 @@ const HomeContent = () => (
             <h2 className="articles__title">
                 articles
             </h2>
+            <ArticlesContainer />
+            <a href="/articles" className="btn--view">View all</a>
         </section>
         <section className="games">
             <h2 className="games__title">
@@ -143,7 +150,9 @@ const HomeContent = () => (
             </div>
             <a href="" className="btn--view">View all</a>
         </section>
+        <ContactUs />
     </div>
-)
+    )
+}
 
 export default HomeContent;
