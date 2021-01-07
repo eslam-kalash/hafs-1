@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import TeamCard from './TeamCard';
 import ArticlesContainer from '../ArticlesPage/ArticlesContainer';
-import ContactUs from './ContactUs';
+import Games from '../GamesPage';
+import ContactUs from '../ContactusPage';
 import { Button } from 'react-bootstrap';
 import CountUp from 'react-countup';
 
@@ -21,8 +22,8 @@ const HomeContent = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eligendi qui amet quibusdam modi et distinctio soluta.
                 </p>
                 <div>
-                    <Button className='btn btn--primary mr-3'>Free Session</Button>
-                    <Button className='btn btn--light'>Sign up as a teacher</Button>
+                    <a href="/free-session" className='btn btn--primary mr-3'>Free Session</a>
+                    <a className='btn btn--light'>Sign up as a teacher</a>
                 </div>
             </div>
         </section>
@@ -122,15 +123,7 @@ const HomeContent = () => {
             <ArticlesContainer />
             <a href="/articles" className="btn--view">View all</a>
         </section>
-        <section className="games">
-            <h2 className="games__title">
-                games
-            </h2>
-            <div className="games__container">
-                <img src="img/Group 107.svg" alt="games"/>
-                <p>We didn't add any game yet <br />Wait our games SOON !</p>
-            </div>
-        </section>
+        <Games />
         <section className="team">
             <h2 className="team__title">
                 Our team

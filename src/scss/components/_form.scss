@@ -1,0 +1,22 @@
+.form-group {
+    label {
+		display: block;
+		transition: all .3s;
+	}
+
+    .form-control {
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        box-shadow: none;
+
+        &:focus {
+            border-color: rgb(128, 189, 255);
+        }
+    }
+	.form-control:placeholder-shown + .form-label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-2rem);
+    }
+}

@@ -3,14 +3,14 @@ import { Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-const ContactUs = () => (
+const ContactusPage = () => (
     <section className="contact-us">
         <div className="map-container" id='map'>
             <img src="img/Rectangle 289.png" alt="map"/>
         </div>
         <div className="card">
             <div className="row">
-                <div className="col-lg-5">
+                <div className="col-lg-6">
                     <div className="right-content">
                         <div className="right-content__container">
                             <h2 className="right-content__container--title">
@@ -30,37 +30,45 @@ const ContactUs = () => (
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-7">
+                <div className="col-lg-6">
                     <div className="left-content">
-                        {/* <Form>
+                        <Form>
                             <Form.Group controlId="formBasicName">
-                                <Form.Label>Name</Form.Label>
                                 <Form.Control type="text" placeholder="Name" />
+                                <Form.Label>Name</Form.Label>
                             </Form.Group>
                             <Form.Group controlId="formBasicEmail">
+                                <Form.Control type="email" placeholder="Email address" />
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" />
                             </Form.Group>
                             <Form.Group controlId="formBasicSubject">
-                                <Form.Label>Subject</Form.Label>
                                 <Form.Control type="text" placeholder="Subject" />
+                                <Form.Label>Subject</Form.Label>
                             </Form.Group>
                             <Form.Group controlId="formTextarea">
+                                <Form.Control as="textarea" placeholder="Message" rows={3} />
                                 <Form.Label>Message</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
                             </Form.Group>
-                            <Button type="submit">
+                            <Button className="btn btn--primary" type="submit">
                                 Send
                             </Button>
-                        </Form> */}
+                        </Form>
                     </div>
                 </div>
             </div>
         </div>
         <div className="follow-us">
-            
+            <div className="follow-us__title">
+                Follow us
+            </div>
+            <div className="follow-us__icons">
+                <a href=""><img src="img/fb.svg" alt="facebook"/></a>
+                <a href=""><img src="img/yt.svg" alt="youtube"/></a>
+                <a href=""><img src="img/tw.svg" alt="twitter"/></a>
+                <a href=""><img src="img/ins.svg" alt="instgram"/></a>
+            </div>
         </div>
     </section>
 )
 
-export default ContactUs;
+export default ContactusPage;

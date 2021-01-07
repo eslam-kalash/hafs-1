@@ -46,7 +46,8 @@ const Navigation = props => {
                 <Nav.Link className="nav__item" href="/">Home</Nav.Link>
                 <Nav.Link className="nav__item" href="/articles" active={page=="articles"}>Articles</Nav.Link>
                 <Nav.Link className="nav__item" href="/pricing" active={page=="pricing"}>Pricing</Nav.Link>
-                <Nav.Link className="nav__item" href="">Games</Nav.Link>
+                <Nav.Link className="nav__item" href="/games" active={page=="games"}>Games</Nav.Link>
+                <Nav.Link className="nav__item" href="/contact-us" active={page=="contact-us"}>Contact Us</Nav.Link>
             </Nav>
             <div className="navbar-action">
                 <a className="btn btn--trans mr-3" href="">Login</a>

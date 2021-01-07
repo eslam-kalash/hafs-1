@@ -1,0 +1,27 @@
+.games {
+    padding: 2rem;
+
+    &__title {
+        text-align: center;
+        font: normal normal 600 20px/56px Poppins;
+        letter-spacing: 0px;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    &__container {
+        max-width: 700px;
+        text-align: center;
+        margin: auto;
+
+        img {
+            margin-bottom: 30px;
+        }
+        p {
+            text-align: center;
+            font: normal normal normal 15px/27px Poppins;
+            letter-spacing: 0px;
+            color: #A8A8A8;
+        }
+    }
+}
