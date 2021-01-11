@@ -20,4 +20,14 @@
         color: #535353;
         margin-bottom: 2rem;
     }
+
+    .form-container {
+        padding: 30vh 0;
+        max-width: 30rem;
+        margin: auto;
+
+        .form-action {
+            position: absolute;
+        }
+    }
 }

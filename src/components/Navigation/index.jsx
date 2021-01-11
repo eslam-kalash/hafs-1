@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import { Nav, Navbar, Button } from 'react-bootstrap';
+import LoginModal from '../modals/Login';
 
 const Navigation = props => {
     let listener = null
     const [scrollState, setScrollState] = useState("top");
+    const [openLoginModal, setOpenLoginModal] = useState(false);
   
     useEffect(() => {
       listener = document.addEventListener("scroll", e => {
@@ -47,12 +48,14 @@ const Navigation = props => {
                 <Nav.Link className="nav__item" href="/articles" active={page=="articles"}>Articles</Nav.Link>
                 <Nav.Link className="nav__item" href="/pricing" active={page=="pricing"}>Pricing</Nav.Link>
                 <Nav.Link className="nav__item" href="/games" active={page=="games"}>Games</Nav.Link>
+                <Nav.Link className="nav__item" href="/find-teacher" active={page=="find-teacher"}>Find Teacher</Nav.Link>
                 <Nav.Link className="nav__item" href="/contact-us" active={page=="contact-us"}>Contact Us</Nav.Link>
             </Nav>
             <div className="navbar-action">
-                <a className="btn btn--trans mr-3" href="">Login</a>
-                <a className="btn btn--primary" href="">Sign Up</a>
+                <Button className="btn btn--trans mr-3" onClick={() => setOpenLoginModal(true)}>Login</Button>
+                <Button className="btn btn--primary">Sign Up</Button>
             </div>
+          <LoginModal loginModal={openLoginModal} closeLoginModal={() => setOpenLoginModal(false)} />
         </Navbar>
     )
 }

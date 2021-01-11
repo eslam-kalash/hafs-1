@@ -14,6 +14,7 @@ import FreeSession from './FreeSession';
 import Articles from './Articles';
 import Pricing from './Pricing';
 import Games from './Games';
+import FindTeacher from './FindTeacher';
 import Contactus from './Contactus';
 import history from './history';
 
@@ -27,6 +28,7 @@ export default () => {
                 <Route path="/articles" component={Articles} />
                 <Route path="/pricing" component={Pricing} />
                 <Route path="/games" component={Games} />
+                <Route path="/find-teacher" component={FindTeacher} />
                 <Route path="/contact-us" component={Contactus} />
             </Switch>
         </Router>

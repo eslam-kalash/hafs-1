@@ -3,15 +3,15 @@ import React from 'react';
 
 // import Header from './../../components/Header';
 import Navigation from './../../components/Navigation';
-import GamesPage from './../../components/GamesPage';
+import FindTeacherPage from './../../components/FindTeacherPage';
 import Footer from './../../components/Footer';
 
-const Games = () => (
+const FindTeacher = () => (
         <div className="page-container">
-            <Navigation page={'games'} />
-            <GamesPage />
+            <Navigation page={'find-teacher'} />
+            <FindTeacherPage />
             <Footer />
         </div>
 );
 
-export default Games;
+export default FindTeacher;
