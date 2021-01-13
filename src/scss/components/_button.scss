@@ -45,4 +45,12 @@
         color: #004E6E;
         text-transform: uppercase;
     }
+    &--clear {
+        text-decoration: underline;
+        font: normal normal 500 12px/24px Poppins;
+        color: #FF0606;
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0 0.75rem;
+    }
 }

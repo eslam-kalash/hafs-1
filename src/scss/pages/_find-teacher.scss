@@ -1,0 +1,54 @@
+.find-teacher {
+    background: #F3F3F3 0% 0% no-repeat padding-box;
+    padding: 3rem 0;
+
+    &__sidebar {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #F3F3F3;
+        border-radius: 8px;
+        padding: 1rem;
+
+        &--title {
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font: normal normal 500 15px/24px Poppins;
+                color: #000000;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+
+        .form-group {
+            .form-control {
+                border-color: #004E6E;
+            }
+            label {
+                font: normal normal 500 12px/24px Poppins;
+                color: #000000;
+            }
+            .form-check-input {
+                border: 2px solid #004E6E;
+                border-radius: 4px;
+                &:checked {
+                    background: #004E6E 0% 0% no-repeat padding-box;   
+                }
+            }
+        }
+    }
+
+    &__teachers {
+        padding: 1rem;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+    }    
+
+    .team__card {
+        flex-wrap: unset;
+        text-align: left;
+        margin-bottom: 1rem;
+        border: 1px solid #ECF9FF;
+    }
+
+}

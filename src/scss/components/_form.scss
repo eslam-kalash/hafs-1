@@ -13,6 +13,10 @@
         &:focus {
             border-color: rgb(128, 189, 255);
         }
+        &::placeholder {
+            font: normal normal 300 13px/56px Poppins;
+            color: #9CCFE6;
+        }
     }
 	.form-control:placeholder-shown + .form-label {
 		opacity: 0;

@@ -176,7 +176,13 @@
         border-radius: 5px;
         text-align: center;
         padding: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
+        &--image {
+            margin-right: 1rem;
+        }
         img {
             border-radius: 74px;
             width: 90px;
@@ -218,6 +224,7 @@
         &--list {
             list-style: none;
             padding: 0;
+            margin-bottom: 0.5rem;
 
             li {
                 border: 1px solid #0FCCC0;
