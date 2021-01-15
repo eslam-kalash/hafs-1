@@ -53,4 +53,12 @@
         border-color: transparent;
         padding: 0 0.75rem;
     }
+    &--forget {
+        text-decoration: underline;
+        font: normal normal 500 15px/24px Poppins;
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0 0.75rem;
+        color: #004E6E;
+    }
 }

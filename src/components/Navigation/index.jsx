@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Nav, Navbar, Button } from 'react-bootstrap';
 import LoginModal from '../modals/Login';
+import SignupModal from '../modals/Signup';
 
 const Navigation = props => {
     let listener = null
     const [scrollState, setScrollState] = useState("top");
     const [openLoginModal, setOpenLoginModal] = useState(false);
+    const [openSignupModal, setOpenSignupModal] = useState(false);
   
     useEffect(() => {
       listener = document.addEventListener("scroll", e => {
@@ -53,9 +55,10 @@ const Navigation = props => {
             </Nav>
             <div className="navbar-action">
                 <Button className="btn btn--trans mr-3" onClick={() => setOpenLoginModal(true)}>Login</Button>
-                <Button className="btn btn--primary">Sign Up</Button>
+                <Button className="btn btn--primary" onClick={() => setOpenSignupModal(true)}>Sign Up</Button>
             </div>
           <LoginModal loginModal={openLoginModal} closeLoginModal={() => setOpenLoginModal(false)} />
+          <SignupModal signupModal={openSignupModal} closeSignupModal={() => setOpenSignupModal(false)} />
         </Navbar>
     )
 }
