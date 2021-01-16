@@ -5,7 +5,6 @@ import { createGetAllArticlesAction } from './../../../store/actionCreators/arti
 
 // Transform state to component props
 function mapStateToProps(state) {
-	console.log(state);
 	return {
 		articles: state.articles.articles,
 	};
