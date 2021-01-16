@@ -5,36 +5,23 @@ import { Nav } from 'react-bootstrap';
 
 const Component = props => {
     const { view, articles, getAllArticles } = props;
+    const [loaded, setLoaded] = useState(false);
     const [tab, setTab] = useState("1");
 
-    useEffect(() => getAllArticles());
+    useEffect(() => {
+        getAllArticles();
+    },[loaded]);
 
     const renderTab = tabKey => {
         switch (tabKey) {
             case "1":
-                // if (view==='short') {
-                //     return (
-                //         <div className="tab-articles" id="articles">
-                //             <div className="row">
-                //                 <div className="col-lg-4">
-                //                     <ArticlesCard article={articles[0]} />
-                //                 </div>
-                //                 <div className="col-lg-4">
-                //                     <ArticlesCard article={articles[1]} />
-                //                 </div>
-                //                 <div className="col-lg-4">
-                //                     <ArticlesCard article={articles[2]} />
-                //                 </div>
-                //             </div>
-                //         </div>
-                //     );
-                // }else {
+                if (view==='short') {
                     return (
                         <div className="tab-articles" id="articles">
                             <div className="row">
-                                {articles.map(article => {
+                                {articles.slice(0,3).map(article => {
                                     return (
-                                        <div className="col-lg-4">
+                                        <div className="col-lg-4 mb-5">
                                             <ArticlesCard article={article} />
                                         </div>
                                     )
@@ -42,7 +29,21 @@ const Component = props => {
                             </div>
                         </div>
                     );
-                // }
+                }else {
+                    return (
+                        <div className="tab-articles" id="articles">
+                            <div className="row">
+                                {articles.map(article => {
+                                    return (
+                                        <div className="col-lg-4 mb-5">
+                                            <ArticlesCard article={article} />
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    );
+                }
                 break;
             case "2":
                 return (

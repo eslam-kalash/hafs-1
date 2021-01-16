@@ -19,7 +19,7 @@ export default store => next => async action => {
 
 		if (response.ok) {
             const body = await response.json();
-            createAddArticlesAction(body);
+            store.dispatch(createAddArticlesAction(body));
         }
     }
 }
