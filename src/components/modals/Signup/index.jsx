@@ -9,7 +9,7 @@ const Signup = props => {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [passwordConfirm, setPasswordConfirm] = useState('');
-    const [gender, setGender] = useState('');
+    const [gender, setGender] = useState('male');
     const [avatarId, setAvatarId] = useState('1');
 
     const handleSubmit = event => {
@@ -119,6 +119,7 @@ const Signup = props => {
                             isInvalid={validated && gender===''}  
                             onClick={() => setGender("male")}
                             inline
+                            checked={gender==='male'}
                         />
                         <Form.Check
                             type="radio"
@@ -128,6 +129,7 @@ const Signup = props => {
                             isInvalid={validated && gender===''}  
                             onClick={() => setGender("female")}
                             inline
+                            checked={gender==='female'}
                         />
                     </Form.Group>
                     {(gender) === 'male' && (

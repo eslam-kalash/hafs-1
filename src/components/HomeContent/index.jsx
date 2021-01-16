@@ -33,7 +33,11 @@ const HomeContent = () => {
                     HONOR BOARD
                 </h2>
                 <div className="board__card">
-
+                    <div className="board__first">
+                        {/* <img src="img/f-av3.svg" alt="avatar 3"/>
+                        <img src="img/Polygon 26.svg" alt="1st place"/>
+                        <span>Aya Mohamed</span> */}
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,7 +124,7 @@ const HomeContent = () => {
             <h2 className="articles__title">
                 articles
             </h2>
-            <ArticlesContainer />
+            <ArticlesContainer view={'short'} />
             <a href="/articles" className="btn--view">View all</a>
         </section>
         <Games />
