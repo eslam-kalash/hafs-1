@@ -11,6 +11,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 // internal imports
 import Home from './Home';
 import FreeSession from './FreeSession';
+import FreeSessionDone from './FreeSessionDone';
 import Articles from './Articles';
 import Pricing from './Pricing';
 import Games from './Games';
@@ -25,6 +26,7 @@ export default () => {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/free-session" component={FreeSession} />
+                <Route path="/free-session-done" component={FreeSessionDone} />
                 <Route path="/articles" component={Articles} />
                 <Route path="/pricing" component={Pricing} />
                 <Route path="/games" component={Games} />

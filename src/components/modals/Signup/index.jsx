@@ -1,62 +1,131 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
 
 
 const Signup = props => {
     const { signupModal, closeSignupModal } = props;
+    const [validated, setValidated] = useState(false);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
+    const [passwordConfirm, setPasswordConfirm] = useState('');
     const [gender, setGender] = useState('');
     const [avatarId, setAvatarId] = useState('1');
-    
-    const submitForm = () => {
-        
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        event.stopPropagation();
+        setValidated(true);
     }
 
     return (
         <Modal
         show={signupModal}
-        onHide={closeSignupModal}
+        onHide={() => {
+            setValidated(false);
+            closeSignupModal();
+        }}
         aria-labelledby="signup-modal"
         className="signup"
       >
         <Modal.Header closeButton>
           <Modal.Title id="example-modal-sizes-title-sm">
-            Sign up as teacher
+            Sign up as student
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
             <div className="form-wrapper">
-                <Form>
+                <Form noValidate onSubmit={handleSubmit}>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Email address *" value={email} onChange={e => setEmail(e.target.value)} required />
+                        <Form.Control 
+                            type="email" 
+                            placeholder="Email address *" 
+                            value={email} 
+                            onChange={e => setEmail(e.target.value)} 
+                            isInvalid={validated && email===''} 
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please enter your email.
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="formBasicName">
-                        <Form.Control type="text" placeholder="Name *" required value={name} onChange={e => setName(e.target.value)} />
+                        <Form.Control 
+                            type="text" 
+                            placeholder="Name *" 
+                            required 
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            isInvalid={validated && name===''} 
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please enter your name.
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
-                        <Form.Control type="password" placeholder="Password *" required value={password} onChange={e => setPassword(e.target.value)} />
+                        <Form.Control 
+                            type="password" 
+                            placeholder="Password *" 
+                            isInvalid={validated && password===''}  
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Please enter your password.
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="formBasicConfirmPassword">
-                        <Form.Control type="password" placeholder="Confirm password *" required />
+                        <Form.Control 
+                            type="password" 
+                            placeholder="Confirm password *" 
+                            isInvalid={validated && password!==passwordConfirm}
+                            value={passwordConfirm} 
+                            onChange={e => setPasswordConfirm(e.target.value)}
+                        />
+                        <Form.Control.Feedback type="invalid">
+                            Passwords must match
+                        </Form.Control.Feedback>
                     </Form.Group>
+                    {/* <Form.Group controlId="formBasicTeach">
+                        <Form.Label>I can teach *</Form.Label>
+                        <Form.Check 
+                            type='checkbox'
+                            id='pronunciation'
+                            label='Quran correct pronunciation'
+                        />
+                        <Form.Check 
+                            type='checkbox'
+                            id='arabic'
+                            label='Arabic Language'
+                        />
+                        <Form.Check 
+                            type='checkbox'
+                            id='memorization'
+                            label='Quran memorization'
+                        />
+                        <Form.Check 
+                            type='checkbox'
+                            id='tajweed'
+                            label='Tajweed'
+                        />
+                    </Form.Group> */}
                     <Form.Group controlId="formBasicGender">
                         <Form.Label>Gender *</Form.Label>
                         <Form.Check
                             type="radio"
                             label="male"
                             className="mr-5"
-                            name="formHorizontalRadios"
+                            name="gender"
                             id="male"
+                            isInvalid={validated && gender===''}  
                             onClick={() => setGender("male")}
                             inline
                         />
                         <Form.Check
                             type="radio"
                             label="female"
-                            name="formHorizontalRadios"
+                            name="gender"
                             id="female"
+                            isInvalid={validated && gender===''}  
                             onClick={() => setGender("female")}
                             inline
                         />
@@ -205,7 +274,7 @@ const Signup = props => {
                         </div>
                     </div>
                     )}
-                    <Button className="btn btn--primary" onClick={submitForm} >Create account</Button>
+                    <Button type='submit' className="btn btn--primary">Create account</Button>
                 </Form>
             </div>
         </Modal.Body>
