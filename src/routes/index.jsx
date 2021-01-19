@@ -10,6 +10,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 // internal imports
 import Home from './Home';
+import Dashboard from './Dashboard';
 import FreeSession from './FreeSession';
 import FreeSessionDone from './FreeSessionDone';
 import Articles from './Articles';
@@ -25,6 +26,7 @@ export default () => {
         <Router history={history}>
             <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/dashboard" component={Dashboard} />
                 <Route path="/free-session" component={FreeSession} />
                 <Route path="/free-session-done" component={FreeSessionDone} />
                 <Route path="/articles" component={Articles} />
