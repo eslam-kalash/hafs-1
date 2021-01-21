@@ -1,0 +1,75 @@
+.classroom-wrapper {
+  background: #FFF;
+  .video-call-wrapper {
+    padding: 10px;
+    width: 350px;
+    flex: 0 0 350px;
+    .video-call {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+  .teacher-tools {
+    width: 100%;
+    padding: 30px 20px 60px;
+    .teacher-tools-tabs {
+      border: 0;
+      justify-content: center;
+      margin-bottom: 30px;
+      .nav-link {
+        border: 0;
+        font-weight: 500;
+        color: #000;
+        font-size: 14px;
+        transition: all 0.25s ease-in-out;
+        position: relative;
+        margin-bottom: 10px;
+        &:after {
+          content: "";
+          width: calc(100% - 32px);
+          height: 5px;
+          position: absolute;
+          background: $mainColor;
+          bottom: -10px;
+          left: 16px;
+          opacity: 0;
+          transition: all 0.25s ease-in-out;
+        }
+        &:hover,
+        &.active {
+          color: $mainColor;
+          svg {
+            fill: $mainColor;
+          }
+        }
+        &.active {
+          text-transform: uppercase;
+          &:after {
+            opacity: 1;
+          }
+        }
+        svg {
+          fill: #000;
+          margin-right: 5px;
+          transition: all 0.25s ease-in-out;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .quran-wrapper {
+    text-align: center;
+    .surah-name {
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: -20px;
+      position: relative;
+    }
+  }
+  .tools-options-menu {
+    width: 230px;
+    flex: 0 0 230px;
+    background: #E0F4FF;
+    border-radius: 20px 0 0 20px;
+  }
+}

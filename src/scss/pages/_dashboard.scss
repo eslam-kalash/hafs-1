@@ -1,3 +1,11 @@
+.dashboard-container-fluid {
+    background: #F3F3F3;
+    padding: 30px 30px 70px;
+    .dashboard-main {
+        max-width: 1300px;
+        margin: auto;
+    }
+}
 .dashboard {
     padding: 3rem;
     padding-left: 0;
