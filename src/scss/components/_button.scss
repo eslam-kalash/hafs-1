@@ -66,3 +66,40 @@
         border-color: #A9A9A9	;
     }
 }
+
+.main-btn {
+    background: $mainColor;
+    border: 1px solid transparent;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 10px 20px;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-block;
+    border-radius: 25px;
+    transition: all 0.25s ease-in-out;
+    svg {
+        margin-right: 8px;
+        transition: all 0.25s ease-in-out;
+        fill: #FFF;
+    }
+    &.primary-btn:hover {
+        background: #003d56;
+    }
+    &.danger-btn {
+        background: none;
+        border-color: $red;
+        color: $red;
+        svg {
+            stroke: $red;
+        }
+        &:hover {
+            background: $red;
+            color: #FFF;
+            svg {
+                stroke: #FFF;
+            }
+        }
+    }
+}

@@ -1,17 +1,172 @@
-import React from 'react';
-import {Nav} from "react-bootstrap";
+import React, {useState} from 'react';
+import {Nav, Form, Carousel} from "react-bootstrap";
 
 import VideoCall from './VideoCall';
+import ArticlesCard from "../ArticlesPage/ArticlesContainer/ArticlesCard";
+import VideoCard from "../ArticlesPage/ArticlesContainer/VideoCard";
 
 const ClassroomPage = () => {
+    const [tab, setTab] = useState("1");
+
+    const renderTab = tabKey => {
+        switch (tabKey) {
+            case "1":
+                return (
+                    <div className="quran-wrapper">
+                        <h2 className="surah-name">سورة الفاتحة</h2>
+                        <div className="surah-content">
+                            <img className="img-fluid" src="/img/al-fatiha.jpg" alt="AL Fatiha"/>
+                        </div>
+                    </div>
+                );
+            case "2":
+                return (
+                    <div className="noorani-qaida-wrapper">
+                        <Carousel interval={null}>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src="/img/noorani.jpg"
+                                    alt="First slide"
+                                />
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src="/img/noorani.jpg"
+                                    alt="Third slide"
+                                />
+
+
+                            </Carousel.Item>
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src="/img/noorani.jpg"
+                                    alt="Third slide"
+                                />
+
+
+                            </Carousel.Item>
+                        </Carousel>
+                    </div>
+                );
+            case "3":
+                return (
+                    <div className="upload-file-wrapper">
+                        <p className="upload-file-info">
+                            During a classroom session, files which you upload will be
+                            shown here and shared with the student
+                        </p>
+                        <Form>
+                            <Form.Group>
+                                <Form.File
+                                    id="uploadFile"
+                                    label="Upload file"
+                                    custom
+                                />
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect7">
+                                <Form.Control type="text" placeholder="Name" />
+                            </Form.Group>
+                        </Form>
+                    </div>
+                );
+            default:
+                break;
+        };
+    }
+    const renderToolsMenu = tabKey => {
+        switch (tabKey) {
+            case "1":
+                return (
+                    <div className="tools-options-menu">
+                        <Form>
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Surah:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>1 - Al-Fatiha</option>
+                                    <option>2 - Al-Baqarah</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect2">
+                                <Form.Label>Ayah:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect3">
+                                <Form.Label>Juz:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect4">
+                                <Form.Label>Text:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect5">
+                                <Form.Label>Font:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>option 1</option>
+                                    <option>option 2</option>
+                                </Form.Control>
+                            </Form.Group>
+                            <Form.Group controlId="exampleForm.ControlSelect6">
+                                <Form.Label>Size:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>14</option>
+                                    <option>16</option>
+                                    <option>18</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
+                    </div>
+                );
+                break;
+            case "2":
+                return (
+                    <div className="tools-options-menu">
+                        <Form>
+                            <Form.Group controlId="exampleForm.ControlSelect1">
+                                <Form.Label>Qaida:</Form.Label>
+                                <Form.Control as="select">
+                                    <option>19</option>
+                                    <option>20</option>
+                                </Form.Control>
+                            </Form.Group>
+                        </Form>
+                    </div>
+                );
+                break;
+            default:
+                break;
+        };
+    }
     return (
         <div className="dashboard-container-fluid">
             <div className="dashboard-main classroom-wrapper d-flex">
                 <div className="video-call-wrapper">
                     <VideoCall />
+                    <Form>
+                        <Form.Group controlId="exampleForm.ControlSelect8" className="send-message-input">
+                            <Form.Control type="text" placeholder="Type your message" />
+                            <button type="submit" className="submit-btn-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19.517" height="19.517" viewBox="0 0 19.517 19.517">
+                                    <path id="Path_2132" data-name="Path 2132" d="M13.855,6.121l-5.664,5.7L1.561,7.741A1.182,1.182,0,0,1,1.847,5.6L17.5,1.047a1.176,1.176,0,0,1,1.447,1.471L14.3,18.158a1.168,1.168,0,0,1-2.123.274l-3.989-6.61" transform="translate(-0.245 -0.238)" fill="none" stroke="#bfe9ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                                </svg>
+                            </button>
+                        </Form.Group>
+                    </Form>
                 </div>
                 <div className="teacher-tools">
-                    <Nav className="teacher-tools-tabs" variant="tabs">
+                    <Nav className="teacher-tools-tabs" variant="tabs" activeKey={tab} onSelect={eventKey => setTab(eventKey)}>
                         <Nav.Item>
                             <Nav.Link eventKey="1"  href="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19.411" height="15.985" viewBox="0 0 19.411 15.985">
@@ -63,16 +218,33 @@ const ClassroomPage = () => {
                             </Nav.Link>
                         </Nav.Item>
                     </Nav>
-                    <div className="quran-wrapper">
-                        <h2 className="surah-name">سورة الفاتحة</h2>
-                        <div className="surah-content">
-                            <img className="img-fluid" src="/img/al-fatiha.jpg" alt="AL Fatiha"/>
-                        </div>
-                    </div>
-                </div>
-                <div className="tools-options-menu">
+                    {renderTab(tab)}
 
+
+                    <ul className="list-inline text-center mt-5">
+                        <li className="list-inline-item">
+                            <button className="main-btn primary-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14.695" height="14.421" viewBox="0 0 14.695 14.421">
+                                    <path id="Path_2201" data-name="Path 2201" d="M5.889.573A.579.579,0,0,0,5.3,0H4L3.838,0A3.137,3.137,0,0,0,.829,3.111v1.5l.005.078A.585.585,0,0,0,2,4.607v-1.5l0-.124a1.986,1.986,0,0,1,2-1.84H5.305l.079-.005A.577.577,0,0,0,5.889.573ZM15.52,2.959A3.156,3.156,0,0,0,12.351,0H11.07l-.079.005a.577.577,0,0,0-.5.568.579.579,0,0,0,.584.573h1.28l.126,0a1.992,1.992,0,0,1,1.879,1.964V4.607l.005.078a.585.585,0,0,0,1.163-.078V3.114Zm-.58,4.312a.581.581,0,0,1,.579.5l.005.078v3.463a3.149,3.149,0,0,1-3.016,3.111l-.158,0H11.07a.573.573,0,0,1-.079-1.141l.079-.005h1.28a2,2,0,0,0,2-1.844l0-.124V7.844A.579.579,0,0,1,14.94,7.271Zm-12.948.5a.585.585,0,0,0-1.163.078V11.31l0,.155A3.144,3.144,0,0,0,4,14.421H5.3l.079-.005a.573.573,0,0,0-.079-1.141H4l-.126,0A1.98,1.98,0,0,1,2,11.31V7.844Z" transform="translate(-0.829)" fill-rule="evenodd"/>
+                                </svg>
+                                Full screen
+                            </button>
+                        </li>
+                        <li className="list-inline-item">
+                            <button className="main-btn danger-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13.274" height="12.928" viewBox="0 0 13.274 12.928">
+                                    <g id="Group_566" data-name="Group 566" transform="translate(0.5 0.5)">
+                                        <path id="Path_2142" data-name="Path 2142" d="M8.666,3.749v-.6A2.376,2.376,0,0,0,6.29.772H3.147A2.376,2.376,0,0,0,.772,3.147v7.176A2.376,2.376,0,0,0,3.147,12.7H6.3A2.369,2.369,0,0,0,8.666,10.33V9.722" transform="translate(-0.772 -0.772)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                                        <path id="Path_2143" data-name="Path 2143" d="M15.532,10.021H7.768" transform="translate(-3.258 -4.058)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                                        <path id="Path_2144" data-name="Path 2144" d="M16.881,7.106l1.888,1.879-1.888,1.88" transform="translate(-6.495 -3.022)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                                    </g>
+                                </svg>
+                                END SESSION
+                            </button>
+                        </li>
+                    </ul>
                 </div>
+                {renderToolsMenu(tab)}
             </div>
         </div>
     );
