@@ -2,10 +2,10 @@ import React from 'react';
 import DashboardSidebar from '../DashboardSidebar';
 
 
-const DashboardPage = () => (
-    <div className='dashboard-page'>
+const SchedulePage = () => (
+    <div className='schedule'>
         <DashboardSidebar />
     </div>
 )
 
-export default DashboardPage;
+export default SchedulePage;
