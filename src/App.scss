@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "scss/abstracts/variables";
 @import "scss/abstracts/mixins";
+@import "scss/base/base";
 @import "scss/base/typography";
 @import "scss/components/button";
 @import "scss/components/form";
@@ -8,6 +9,9 @@
 @import "scss/layout/footer";
 @import "scss/pages/free-session";
 @import "scss/pages/dashboard";
+@import "scss/pages/classroom";
+@import "scss/pages/homework";
+@import "scss/pages/my-dashboard";
 @import "scss/pages/articles";
 @import "scss/pages/pricing";
 @import "scss/pages/games";

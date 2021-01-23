@@ -1,0 +1,210 @@
+.homework-types-wrapper {
+  display: flex;
+  .homework-type-box {
+    width: 100%;
+    text-align: center;
+    height: 110px;
+    color: #FFF;
+    background: #1BB596;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    text-decoration: none;
+    padding: 15px 30px;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 600;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+
+      width: 125px;
+      height: 125px;
+      background: rgba(#9CFFEB, 0.1);
+      border-radius: 50%;
+    }
+    &:first-child {
+      &:before {
+        width: 140px;
+        height: 140px;
+        bottom: 17px;
+        right: -25px;
+      }
+    }
+    &:nth-child(2) {
+      background: #2F9DCE;
+      &:before {
+        background: rgba(#74C8EE, 0.1);
+        bottom: -58px;
+        left: -20px;
+      }
+    }
+    &:nth-child(3) {
+      background: #9D1BB5;
+      &:before {
+        background: rgba(#EC84FF, 0.1);
+        top: -77px;
+        left: -40px;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+      background: #14398E;
+      &:before {
+        background: rgba(#82A6FB, 0.1);
+        bottom: -58px;
+        right: -10px;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+.resent-homework-wrapper {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #A5A5A5;
+  &.rhw-noborder {
+    margin-top: 20px;
+    padding-top: 0;
+    border-top: 0;
+  }
+  .rh-title {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 17px;
+  }
+  .resent-homework {
+    a {
+      display: flex;
+      justify-content: space-between;
+      color: #000;
+      text-decoration: none;
+      padding: 5px 0;
+      margin-bottom: 12px;
+      transition: all .25s ease-in-out;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+    .st-name {
+      font-size: 12px;
+      font-weight: 500;
+      margin-left: 13px;
+    }
+    .hw-type {
+      font-size: 15px;
+      font-weight: 600;
+      color: $mainColor;
+    }
+    .hw-st-avatar {
+      &.group-st-avatar {
+        img {
+          margin-right: -10px;
+          width: 29px;
+          height: 29px;
+          border-radius: 50%;
+          border: 1px solid #FFF;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.hw-questions-item {
+  .hw-the-question {
+    margin-bottom: 30px;
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: $mainColor;
+    }
+    input {
+      border-bottom: 1px solid #DFDFDF;
+      font-weight: 13;
+      &::placeholder {
+        color: #000;
+      }
+    }
+  }
+  .hw-question-answers {
+    margin-bottom: 35px;
+    padding-left: 15px;
+    .form-group {
+      margin-bottom: 0;
+    }
+    .form-label {
+      color: $mainColor;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .hw-question-answer {
+      background: #ECF9FF;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .hw-question-input {
+      background: none;
+      border-bottom: 1px solid #4385A7;
+      color: #000;
+      font-size: 13px;
+    }
+    .hw-correct-answer-check {
+      label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #5CB85C;
+        line-height: 1.8;
+      }
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background: $mainColor;
+        border-color: $mainColor;
+      }
+    }
+  }
+
+}
+.hw-questions-actions {
+  button {
+    margin-right: 15px;
+  }
+}
+
+.hwq-items {
+  .hwq-item {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 45px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .hwq-title {
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .hwq-answers {
+      color: $mainColor;
+      margin-bottom: 20px;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    .hwq-correct-answer {
+      color: $green;
+    }
+  }
+}

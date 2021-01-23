@@ -38,7 +38,7 @@ const Navigation = props => {
         <Navbar id="navbar" className={(page=='home') ? 'transparent':'white'}>
             <Navbar.Brand href="/">
                 <img
-                    src="img/logo.png"
+                    src="/img/logo.png"
                     width="112"
                     height="100"
                     className="d-inline-block align-top"
