@@ -79,6 +79,7 @@
     display: inline-block;
     border-radius: 25px;
     transition: all 0.25s ease-in-out;
+    text-decoration: none !important;
     svg {
         margin-right: 8px;
         transition: all 0.25s ease-in-out;
@@ -101,5 +102,77 @@
                 stroke: #FFF;
             }
         }
+    }
+    &.main-btn-primary {
+        border-radius: 5px;
+        background: $mainColor;
+        border: 1px solid $mainColor;
+        color: #FFF;
+        padding: 12px 30px;
+        &:hover {
+            background: #02415B;
+        }
+    }
+    &.trans-main-btn {
+        background: #ECF9FF;
+        color: $mainColor;
+        font-weight: 600;
+        &:hover {
+            background: $mainColor;
+            color: #FFF;
+        }
+    }
+    &.border-btn-primary {
+        border-radius: 5px;
+        background: none;
+        border: 1px solid $mainColor;
+        color: $mainColor;
+        padding: 12px 30px;
+        &:hover {
+            background: $mainColor;
+            color: #FFF;
+        }
+    }
+    &.light-green-btn {
+        background: $light_green;
+        font-weight: 600;
+        &:hover {
+            background: $green;
+            color: #FFF;
+        }
+    }
+}
+
+.danger-link {
+    color: $red;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+    svg {
+        margin-right: 5px;
+    }
+}
+.main-icon-btn {
+    background: $mainColor;
+    border: 1px solid transparent;
+    color: #FFF;
+    font-weight: 500;
+    font-size: 13px;
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    line-height: 39px;
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out;
+    text-decoration: none !important;
+    text-align: center;
+    &:hover {
+        background: #02415B;
     }
 }

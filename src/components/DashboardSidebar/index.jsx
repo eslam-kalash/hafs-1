@@ -24,7 +24,7 @@ const DashboardSidebar = () => {
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="4">
+                    <Nav.Link eventKey="/dashboard/homework" href="/dashboard/homework">
                             Home Work
                     </Nav.Link>
                 </Nav.Item>
