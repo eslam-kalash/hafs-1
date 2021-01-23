@@ -7,6 +7,7 @@ import DashboardPage from '../../components/DashboardPage';
 import ClassroomPage from './../../components/ClassroomPage';
 import SchedulePage from './../../components/SchedulePage';
 import HomeWorkPage from './../../components/HomeWorkPage';
+import ProfilePage from './../../components/ProfilePage';
 import Footer from './../../components/Footer';
 import HomeWorkTypePage from "../../components/HomeWorkTypePage";
 import HomeWorkNewPage from "../../components/HomeWorkNewPage";
@@ -24,6 +25,7 @@ const Dashboard = () => (
                     <Route path='/dashboard/homework/tajweed' component={HomeWorkTypePage} />
                     <Route path='/dashboard/homework/:id' component={HomeWorkSinglePage} />
                     <Route path='/dashboard/homework' component={HomeWorkPage} />
+                    <Route path='/dashboard/profile' component={ProfilePage} />
                 </Switch>
             </div>
             <Footer />

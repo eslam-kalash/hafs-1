@@ -1,0 +1,53 @@
+.schedule {
+    &__main {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 8px;   
+        margin-left: 2rem;
+
+        h2 {
+            font: normal normal 500 15px/24px Poppins;
+            color: #004E6E;
+            text-transform: uppercase;
+        }
+    }
+
+    &__table {
+        padding: 2rem;
+    }
+
+    &__availability {
+        padding: 2rem;
+        height: 100%;
+        background: #E0F4FF 0% 0% no-repeat padding-box;
+        border-radius: 20px 0px 0px 20px;
+
+        &--container {
+            max-width: 10rem;
+            margin: auto;
+            text-align: center;
+            padding: 40% 0;
+
+            h4 {
+                font: normal normal normal 12px/16px Poppins;
+                color: #000000;
+                text-align: left;
+            }
+
+            input {
+                width: 100%;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                border: 1px solid #DDDDDD;
+                border-radius: 0px 4px 4px 0px;
+                text-align: center;
+                font: normal normal 500 13px/36px Poppins;
+                color: #000000;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                margin-top: 2rem;            
+            }
+        }
+    }
+}
